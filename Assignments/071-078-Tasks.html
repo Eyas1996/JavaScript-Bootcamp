@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tasks</title>
+</head>
+
+<body>
+
+  <script>
+
+    /*Task 01*/
+    // Letters And Numbers يحتوي على mix لديك متغير بإسم 
+    // Map جديدة بواسطة ال Array قم بإنشاء    
+    // يجب عليك إستثناء الأرقام نهائيا من النتيجة
+    // لتخرج بالنتيجة Letters لل Concatenate يجب عليك عمل 
+    // لتخرج بالناتج المطلوب  مع ما تعلمته  Map + Reduce يجب إستعمال ال 
+    // Join أو Filter ممنوع إستخدام ال 
+
+    let mix = [1, 2, 3, "E", 4, "l", "z", "e", "r", 5, "o"]; // => Elzero
+    let str = mix.map((a) => isNaN(parseInt(a)) ? a : "").reduce((a, b) => a + b);
+    console.log(str);
+
+    // Explantion
+    // let str = mix.map(function (a) {
+    //   return isNaN(parseInt(a)) ? a : "";
+    // }).reduce(function (a, b) {
+    //   return a + b;
+    // });
+    // --------------------------------------------------------------------------------------
+
+    /*Task 02*/
+    // منها المكرر ومنها العادي Letters يحتوي على  myString لديك متغير بإسم 
+    // Filterجديدة بواسطة ال Array قم بإنشاء 
+    //  المكررة نهائيا من النتيجة Letters يجب عليك إستثناء ال 
+    //  لتخرج بالنتيجة Lettersلل Concatenate يجب عليك عمل 
+
+    let myString = "EElllzzzzzzzerooEe"; // => Elzero
+    let filter = myString.split("").filter((a, b, c) => c.indexOf(a) === b).reduce((a, b) => a + b);
+    console.log(filter)
+
+    // Explantion
+    // let filter = myString
+    //   .split("")
+    //   .filter(function (element, index, arr) {
+    //     console.log("index of the Current Element in this Array " + arr.indexOf(element));
+    //     console.log("index of the Current Element " + index);
+    //     console.log(arr.indexOf(element) === index);
+    //     console.log("-------------------------");
+    //     return arr.indexOf(element) === index
+    //   }).join("");
+
+    // --------------------------------------------------------------------------------------
+    /*Task 03*/
+    // أخرى Array وبداخلها Array يحتوي على myArray لديك متغير بإسم 
+    // Reduceبواسطة ال  Array قم بإنشاء 
+    //واحدة Array لترجع ب  Array لل Flatten يجب عليك عمل 
+    //لتخرج بالنتيجة Letters لل Concatenate يجب عليك عمل 
+    //نهائيا Array.flat() ممنوع إستخدام 
+
+    let myArray = ["E", "l", "z", ["e", "r"], "o"]; // => Elzero
+    // console.log(myArray.flat().join(""));
+    let myflatten = myArray.reduce((acc, current) => acc.concat(current), []).join("");
+    console.log(myflatten);
+
+    // Explantion
+    // let myflatten = myArray.reduce(function (acc, current, index, arr) {
+    //   console.log(`Acc => ${acc}`)
+    //   console.log(`Current Element => ${current}`)
+    //   console.log(`Current Element Index => ${index}`)
+    //   console.log(`Array => ${arr}`)
+    //   console.log(acc + current);
+    //   console.log("###################");
+    //   return acc.concat(current);
+    // }, []).join("");
+    // --------------------------------------------------------------------------------------
+    /*Task 04*/
+    // Letters And Numbers يحتوي على  numsAndStrings لديك متغير بإسم 
+    // Filter + Map جديدة بواسطة ال  Array قم بإنشاء  
+    // من النتيجة  Letters يجب عليك إستثناء ال 
+    // يجب عليك عكس الأرقام بمعنى: الموجب يكون سالب والسالب يكون موجب
+    // كما تريد + Map + Filter يجب عليك إستخدام ال 
+
+    let numsAndStrings = [1, 10, -10, -20, 5, "A", 3, "B", "C"]; // => [-1, -10, 10, 20, -5, -3]
+    let myFunk = numsAndStrings.filter((a) => !isNaN(parseInt(a)) ? a : "").map((a) => -a);
+
+    console.log(numsAndStrings);
+    console.log(myFunk);
+    // --------------------------------------------------------------------------------------
+    // /*Task 05*/
+    // يحتوي على مجموعة أرقام زوجية وفردية  nums  لديك متغير بإسم 
+    // فقط Reduce قم بإيجاد النتيجة النهائية المطلوبة بواسطة إستخدام ال 
+    // لرقم 1 Reduce لل Initial Value يجب عليك تعيين ال 
+    // Current Element ال مع Accumulator رقم فردي قم بجمع ال  Reduce في ال  Current Element إذا كانت قيمة ال 
+    /* زوجي  Reduce في ال  Current Element إذا كانت قيمة ال 
+    Current Element مع ال  Accumulator  قم بضرب ال رقم */
+
+
+    let nums = [2, 12, 11, 5, 10, 1, 99]; // => 500
+    let reduce = nums.reduce((acc, current) => current % 2 === 1 ? acc + current : acc * current, 1);
+    console.log(reduce);
+
+    // Explantion
+    // let reduce = nums.reduce(function (acc, current, index, arr) {
+    //   console.log(`Acc => ${acc}`)
+    //   console.log(`Current Element => ${current}`)
+    //   console.log(`Current Element Index => ${index}`)
+    //   console.log(`Array => ${arr}`);
+    //   console.log(acc + current);
+    //   console.log(`#####################`);
+    //   if (current % 2 === 1) {
+    //     return acc + current;
+    //   } else {
+    //     return acc * current;
+    //   }
+    // }, 1);
+  </script>
+</body>
+
+</html>

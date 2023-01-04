@@ -1,0 +1,25 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+  text-align:center;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+}
+.card,
+.testing {
+  background-color: rgb(46, 214, 214);
+  padding: 20px;
+  text-align: center;
+  font-size: 2em;
+  font-family: arial;
+  cursor: pointer;
+  width: 400px;
+  margin: 20px auto;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}

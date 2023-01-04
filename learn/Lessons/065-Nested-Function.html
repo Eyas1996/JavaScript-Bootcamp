@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nested Function</title>
+</head>
+<body>
+  
+
+  <script>
+// --------------------------------------------------
+// Exaple 1
+  function sayMessage(fName, lName) {
+    let message = `Hello`;
+    // Nested Function
+    function concatMsg() {
+      message = `${message} ${fName} ${lName}`;
+    }
+    concatMsg();
+    return message;
+  }
+  console.log(sayMessage("Eyas", "Hamad"));
+  // --------------------------------------------------
+  // Exaple 2
+  function sayMessage(fName, lName) {
+    let message = `Hello`;
+    // Nested Function
+    function concatMsg() {
+      return  `${message} ${fName} ${lName}`;
+    }
+    
+    return concatMsg();
+  }
+  console.log(sayMessage("Eyas", "Hamad"));
+  // --------------------------------------------------
+  // Exaple 3
+  function sayMessage(fName, lName) {
+    let message = `Hello`;
+    // Nested Function
+    function concatMsg() {
+      function getFullName() {
+        return `${fName} ${lName}`;
+      }
+      return  `${message} ${getFullName()}`;
+    }
+    return concatMsg();
+  }
+  console.log(sayMessage("Eyas", "Hamad"));
+  
+  </script>
+</body>
+</html>

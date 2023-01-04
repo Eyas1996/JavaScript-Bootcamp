@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check Attributes Examples</title>
+</head>
+<body>
+  <div>Div</div>
+  <p class="para" title="Paragraph" data-src="Testing">Paragraph</p>
+
+  <script>
+  /*
+  DOM [Check Attributes]
+  - Element.attributes
+  - Element.hasAttribute
+  - Element.hasAttributes
+  - Element.removeAttribute
+  */
+
+    console.log(document.getElementsByTagName("p")[0].attributes);
+
+    let myP = document.getElementsByTagName("p")[0];
+
+    if (myP.hasAttribute("data-src")) {
+      if (myP.getAttribute("data-src") === "") {
+        myP.removeAttribute("data-src");
+      } else {
+        myP.setAttribute("data-src",  "New Value");
+      }
+    } else {
+      console.log("Not Found");
+    }
+
+    if (myP.hasAttributes()) {
+      console.log("Has Attributes")
+    }
+
+    let myDiv = document.getElementsByTagName("div");
+    myDiv[0].setAttribute("title", "myDivDov");
+
+    if (myDiv[0].hasAttributes()) {
+      console.log(`Yes, it Has Attributes`)
+    } else {
+      console.log(`No`);
+    }
+  </script>
+</body>
+</html>

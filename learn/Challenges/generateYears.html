@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generate Years</title>
+</head>
+
+<body>
+
+  <script>
+    // function generateYears(start, end) {
+    //   let selectElement = document.createElement("select");
+    //   for (let i = start; i <= end; i++) {
+    //     selectElement.innerHTML =
+    //       `<option value=${[i]}>${[i]}</option>`
+    //     console.log(i);
+    //   }
+    //   document.body.appendChild(selectElement)
+    // }
+    // generateYears(2010, 2022);
+
+
+    function generateYears(start, end) {
+      document.write(`<select>`);
+      for (let i = start; i <= end; i++) {
+        document.write(`<option value=${[i]}>${[i]}</option>`);
+      }
+      document.write(`</select>`);
+    }
+    generateYears(2000, 2022);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create And Append Elements</title>
+</head>
+<body>
+  
+  
+  <script>
+/*
+  DOM [Create Elements]
+  - createElement
+  - createComment
+  - createTextNode
+  - createAttribute
+  - appendChild
+*/
+
+let myElement = document.createElement("div");
+let myAttr = document.createAttribute("data-custom");
+let myText = document.createTextNode("Product One");
+let myComment = document.createComment("This Is Div");
+
+myElement.className = "product";
+myElement.setAttributeNode(myAttr);
+myElement.setAttribute("data-test", "Testing");
+
+// Append Comment To Element
+myElement.appendChild(myComment);
+
+// Append Text To Element
+myElement.appendChild(myText);
+
+// Append Element To Body
+document.body.appendChild(myElement);
+  </script>
+</body>
+</html>

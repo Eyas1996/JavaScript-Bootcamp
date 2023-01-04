@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loop On Data</title>
+</head>
+<body>
+  
+  <script>
+    /*
+  Ajax
+  Loop On Data
+
+  Search
+  - Cross Origin API [CORS]
+  - API Authentication
+*/
+
+let myRequest = new XMLHttpRequest();
+myRequest.open("GET", "https://api.github.com/users/Eyas1996/repos");
+myRequest.send();
+myRequest.onreadystatechange = function () {
+  if (this.readyState === 4 && this.status === 200) {
+    // console.log(this.responseText);
+    let jsData = JSON.parse(this.responseText);
+    // console.log(jsData);
+    for (let i = 0; i < jsData.length; i++) {
+      let div = document.createElement("div");
+      let repoName = document.createTextNode(jsData[i].full_name);
+      div.appendChild(repoName);
+      document.body.appendChild(div);
+    }
+  }
+};
+  </script>
+</body>
+</html>
