@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dot Notation VS Bracket Notation</title>
+</head>
+
+<body>
+
+  <script>
+
+    /*
+      Object
+        - Dig Deeper
+        - Dot Notation vs Bracket Notation
+        - Dynamic Property Name
+    */
+    let myVar = "country";
+    let user = {
+      theName: "Osama",
+      country: "Egypt",
+    }
+    console.log(user); // => {theName: 'Osama', country: 'Egypt'}
+    console.log(user.theName); // => Osama
+    console.log(user.myVar); // => undefined
+    console.log(user[myVar]); // => Egypt
+  </script>
+</body>
+
+</html>
