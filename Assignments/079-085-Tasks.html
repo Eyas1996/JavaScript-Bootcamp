@@ -12,8 +12,16 @@
 
   <script>
     // Task01
+    // Create the Object which extract the following data 
     // Create Your Object Here
-
+    let member = {
+      name: "Elzero",
+      age: 38,
+      country: "Egypt",
+      fullDetails: function () {
+        return `My Name Is ${member.name}, My Age Is ${member.age}, I Live in ${member.country}`
+      }
+    }
     console.log(member.name); // Elzero
     console.log(member.age); // 38
     console.log(member.country); // Egypt
@@ -25,44 +33,44 @@
 
     // Method One
     // Create Your Object Here
-
-    console.log(objMethodOne.property); // "Method One"
+    let objMethodOne = {
+      name: "Eyas",
+    };
+    console.log(objMethodOne.name); // "Method One"
 
     // Method Two
     // Create Your Object Here
-
-    console.log(objMethodTwo.property); // "Method Two"
+    let objMethodTwo = new Object(objMethodOne);
+    objMethodTwo.name = "Osama",
+    console.log(objMethodTwo.name); // "Method Two"
 
     // Method Three
     // Create Your Object Here
-
-    console.log(objMethodThree.property); // "Method Three"
+    let objMethodThree = Object.create(objMethodTwo);
+    objMethodThree.name = "Ali"
+    console.log(objMethodThree.name); // "Method Three"
 
     // Method Four
     // Create Your Object Here
-
-    console.log(objMethodFour.property); // "Method Four"
+    let objMethodFour = Object.assign(objMethodThree);
+    objMethodFour.name = "Ibrahim",
+    console.log(objMethodFour.name); // "Method Four"
     // ----------------------------------------------------
     // Task03
     // Use the Object.assign() to create a new Object containing all of the above
-
     let a = 1;
-
     let threeNums = {
       b: 2,
       c: 3,
       d: 4,
     };
-
     let twoNums = {
       e: 5,
       f: 6,
     };
-
     // Create Your Object Here in One Line
-
+    let finalObject = Object.assign({}, {a}, threeNums, twoNums)
     console.log(finalObject);
-
     /*
       a: 1
       b: 2
