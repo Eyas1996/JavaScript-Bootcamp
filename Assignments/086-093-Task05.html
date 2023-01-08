@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>086-093 Tasks</title>
+</head>
+
+<body>
+  <img decoding="async" src="#" alt="One" />
+  <img decoding="async" src="#" />
+  <img decoding="async" src="#" alt="Three" />
+  <img decoding="async" src="#" />
+  <img decoding="async" src="#" />
+  <script>
+
+    // Task05
+    // You have 5 images per page, some of them contain Alt Attributes and the rest don't
+    // Loop all images and make sure the Alt Attribute is present
+    // If it exists, change the value to Old
+    // If it does not exist, change the value to Elzero New
+    // Watch the result to see what you need
+
+
+    let myImgs = document.querySelectorAll("img");
+
+    for (let i = 0; i < myImgs.length; i++) {
+      if (myImgs[i].hasAttribute("alt")) {
+        myImgs[i].setAttribute("alt", "Old");
+      } else {
+        myImgs[i].setAttribute("alt", "Elzero New");
+      };
+      console.log(myImgs[i]);
+    };
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>086-093 Tasks</title>
+    <style>
+    body {
+      background-color: #444;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <img decoding="async" src="#" alt="" />
+  </div>
+  <div>
+    <img decoding="async" src="#" alt="" />
+  </div>
+  <div>
+    <img decoding="async" src="#" alt="" />
+  </div>
+  <div>
+    <img decoding="async" src="#" alt="" />
+  </div>
+  <div>
+    <img decoding="async" src="#" alt="" />
+  </div>
+  <div>
+    <img decoding="async" src="#" alt="" />
+  </div>
+  <div>
+    <img decoding="async" src="#" alt="" />
+  </div>
+  <div>
+    <img decoding="async" src="#" alt="" />
+  </div>
+  <div>
+    <img decoding="async" src="#" alt="" />
+  </div>
+  <div>
+    <img decoding="async" src="#" alt="" />
+  </div>
+<script>
+    
+    // Task02
+    // We have a couple of images on the page, consisting of 10 images without the source
+    // What is required is to change the Src Attribute to the following logo image “https://elzero.org/wp-content/themes/elzero/imgs/logo.png”
+    // Change the content of the Alt Attribute for the Elzero Logo
+    // You must make a loop that does the job directly and does not repeat the code
+    
+    let myImg = document.getElementsByTagName("img");
+    
+    for (let i = 0; i < myImg.length; i++) {
+      console.log(myImg[i]);
+      myImg[i].src = "https://elzero.org/wp-content/themes/elzero/imgs/logo.png";
+      myImg[i].alt = "Elzero Logo";
+    }
+  </script>
+</body>
+
+</html>

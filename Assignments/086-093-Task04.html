@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>086-093 Tasks</title>
+</head>
+<body>
+  <div class="one" title="two">Two</div>
+  <div class="two" title="one">One</div>
+
+  <script>
+    // Task04
+    // You have racists whose content and attributes are scattered
+    // What is required is to move the content and the Title Attribute from the first div to the second and from the second to the first
+    // It is absolutely not allowed to write numbers or Strings or use True or False, except for the names of Classes, of course
+    // You must add the number 2 next to the word Two
+    // Watch the result to see what you need
+
+    let first = document.querySelector(".one");
+    let second = document.querySelector(".two");
+    first.textContent = second.textContent;
+    first.title = first.className;
+
+    second.title = second.className;
+    second.textContent = second.className[second.id.length]
+    .toLocaleUpperCase() + 
+    second.className.slice([second.className.indexOf("w")])
+     + " " + 
+    second.attributes.length;
+    
+    // second.textContent = second.className[0].toLocaleUpperCase() + second.className.slice([1]) + " " + (second.className.length - 1);
+  </script>
+</body>
+</html>

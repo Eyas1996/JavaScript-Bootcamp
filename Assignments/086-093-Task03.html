@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>086-093 Tasks</title>
+  </style>
+</head>
+
+<body>
+  <form action="">
+    <input type="number" name="dollar" placeholder="USD Dollar" />
+    <div class="result">{0} USD Dollar = {0} Egyptian Pound</div>
+  </form>
+  <script>
+
+    // Task03
+    // You have the following currency conversion form
+    // All you have to do is type the currency in dollars into the input field
+    // In the place of the result below the input field, you must show the currency in dollars and its counterpart in Egyptian pounds
+    // The person can write the number or paste the number as well
+    // You can change the div of the result and modify it as you like
+    // Never modify the input field
+    // CSS formats to beautify the shape only if you want to do it, there is no problem
+    // One dollar = 15.6 Egyptian pounds
+    // Make sure that the fractions that appear in the result do not exceed two numbers only. For example 1500.32
+
+
+    let myInput = document.querySelector("input");
+    let myDiv = document.querySelector("div");
+    myInput.oninput = (event) => {
+      myDiv.textContent = `{${myInput.value}} USD Dollar = {${(myInput.value * 15.6).toFixed(2)}} Egyptian Pound`;
+     };
+  </script>
+</body>
+
+</html>
