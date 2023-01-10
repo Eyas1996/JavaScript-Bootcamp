@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Simulation – Click, Focus, Blur</title>
+</head>
+
+<body>
+  <form action="">
+    <input class="one" type="text">
+    <input class="two" type="text">
+    <input type="submit" value="Submit Data">
+  </form>
+  <a href="https://google.com" target="_blank">Google</a>
+  <script>
+    /*
+    DOM [Events Simulation]
+    - click
+    - focus
+    - blur
+  */
+
+    let two = document.querySelector(".two");
+    let one = document.querySelector(".one");
+
+    window.onload = () => {
+      two.focus();
+    };
+
+
+    one.onblur = () => {
+      document.links[0].click();
+    };
+
+
+  </script>
+</body>
+
+</html>
