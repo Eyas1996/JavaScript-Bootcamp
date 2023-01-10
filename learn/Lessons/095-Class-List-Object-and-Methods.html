@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClassList Object and Methods</title>
+</head>
+
+<body>
+  <div id="my-div" class="one two show test">Div With Many Classes</div>
+  <script>
+    /*
+      DOM [Class List]
+      - classList
+      --- length
+      --- contains
+      --- item(index)
+      --- add
+      --- remove
+      --- toggle
+    */
+
+    let element = document.getElementById("my-div");
+
+    console.log(element.classList);
+    console.log(typeof element.classList);
+    console.log(element.classList.contains("osama")); // false
+    console.log(element.classList.contains("show")); // true
+    console.log(element.classList.item("3")); // class name with the index 3 => test
+
+    element.onclick = () => {
+      element.classList.add("add-one", "add-two"); // to add new class
+      element.classList.remove("one", "two"); // to remove class name
+      element.classList.toggle("osama"); // to remove class or add it if it not exist
+      element.classList.toggle("show"); // to remove class or add it if it not exist
+    };
+  </script>
+</body>
+
+</html>
