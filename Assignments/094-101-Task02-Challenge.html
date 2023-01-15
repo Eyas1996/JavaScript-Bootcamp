@@ -1,79 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>094-101 Tasks</title>
-<style>
-      body {
-        font-family: Arial, Helvetica, sans-serif;
-      }
-      .assign {
-        text-align: center;
-        padding-top: 20px;
-      }
-      .assign input {
-        padding: 10px;
-        width: 300px;
-        border: 1px solid #ddd;
-      }
-      .assign input:focus {
-        outline: none;
-        border-color: #ccc;
-      }
-      .assign [title="Current"] {
-        padding: 20px;
-        margin: 10px auto;
-        width: 610px;
-        background-color: #f1f0f0;
-      }
-      .assign .classes-list {
-        padding: 20px;
-        margin: 10px auto;
-        width: 610px;
-        background-color: #f1f0f0;
-      }
-      .assign .classes-list h5 {
-        margin: 0 0 10px;
-        text-align: left;
-      }
-      .assign .classes-list div span {
-        background-color: #ff5722;
-        padding: 6px 10px 8px;
-        margin-right: 5px;
-        border-radius: 6px;
-        color: white;
-        display: inline-flex;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="assign">
-      <input type="text" class="classes-to-add" placeholder="Add Classes" />
-      <input type="text" class="classes-to-remove" placeholder="Remove Classes" />
-      <div class="element current" title="Current">Current Element</div>
-      <div class="classes-list">
-        <h5>Current Element Class Lists</h5>
-        <div></div>
-      </div>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .assign {
+      text-align: center;
+      padding-top: 20px;
+    }
+
+    .assign input {
+      padding: 10px;
+      width: 300px;
+      border: 1px solid #ddd;
+    }
+
+    .assign input:focus {
+      outline: none;
+      border-color: #ccc;
+    }
+
+    .assign [title="Current"] {
+      padding: 20px;
+      margin: 10px auto;
+      width: 610px;
+      background-color: #f1f0f0;
+    }
+
+    .assign .classes-list {
+      padding: 20px;
+      margin: 10px auto;
+      width: 610px;
+      background-color: #f1f0f0;
+    }
+
+    .assign .classes-list h5 {
+      margin: 0 0 10px;
+      text-align: left;
+    }
+
+    .assign .classes-list div span {
+      background-color: #ff5722;
+      padding: 6px 10px 8px;
+      margin-right: 5px;
+      border-radius: 6px;
+      color: white;
+      display: inline-flex;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="assign">
+    <input type="text" class="classes-to-add" placeholder="Add Classes" />
+    <input type="text" class="classes-to-remove" placeholder="Remove Classes" />
+    <div class="element current" title="Current">Current Element</div>
+    <div class="classes-list">
+      <h5>Current Element Class Lists</h5>
+      <div id="result"></div>
     </div>
-    <script>
-      // Task02 => a challenge
+  </div>
+  <script>
 
-      // See the following figure
-      // You have two input fields, one to add Classes to the Current element and the other to delete Classes from the Current element
-      // The addition process takes place as soon as you exit the Blur input field
-      // Ensure that the class name is added as Small Letters regardless of the entry
-      // If a person writes two words with spaces between them, they are added as Two Classes or deleted as Two Classes as well
-      // When exiting the input field, be sure to delete the value in it
-      // You must make sure that the field is not empty before leaving it, so that no error appears
-      // You should make a Function to be fired each time you exit an input field
-      // The function of the function is to display the Classes on the Current element in place of the result below
-      // The Function sorts the names of the Classes alphabetically before displaying them
-      // If there are no Classes on the element, the message "No Classes To Show" is displayed.
+    // Task02 => a challenge
 
-      // See the figure to see what is required => https://elzero.org/wp-content/uploads/2021/09/dom-assignment-two.gif
-    </script>
-  </body>
+    // See the following figure
+    // You have two input fields, one to add Classes to the Current element and the other to delete Classes from the Current element
+    // The addition process takes place as soon as you exit the Blur input field
+    // Ensure that the class name is added as Small Letters regardless of the entry
+    // If a person writes two words with spaces between them, they are added as Two Classes or deleted as Two Classes as well
+    // When exiting the input field, be sure to delete the value in it
+    // You must make sure that the field is not empty before leaving it, so that no error appears
+    // You should make a Function to be fired each time you exit an input field
+    // The function of the function is to display the Classes on the Current element in place of the result below
+    // The Function sorts the names of the Classes alphabetically before displaying them
+    // If there are no Classes on the element, the message "No Classes To Show" is displayed.
+
+
+
+    // See the figure to see what is required => https://elzero.org/wp-content/uploads/2021/09/dom-assignment-two.gif
+
+
+    let addInput = document.querySelector(".classes-to-add");
+    let removeInput = document.querySelector(".classes-to-remove");
+    let element = document.querySelector('[title="Current"]');
+    let result = document.getElementById("result");
+
+    function displayClasslist() {
+      result.innerHTML = "";
+      if (element.classList.value === "") {
+        result.innerHTML = "No Classes To Show";
+      } else {
+        element.classList.value
+          .split(" ")
+          .sort()
+          .map((ele) => {
+            let mySpan = document.createElement("span");
+            mySpan.textContent = ele;
+            result.appendChild(mySpan);
+          });
+      };
+    };
+    displayClasslist();
+
+    addInput.onblur = () => {
+      if (addInput.value !== "") {
+        element.classList.add(addInput.value.toLowerCase());
+      };
+      displayClasslist();
+      addInput.value = "";
+    };
+
+    removeInput.onblur = () => {
+      if (removeInput.value !== "") {
+        element.classList.remove(removeInput.value.toLowerCase());
+      };
+      displayClasslist();
+      removeInput.value = "";
+    };
+  </script>
+</body>
+
 </html>
