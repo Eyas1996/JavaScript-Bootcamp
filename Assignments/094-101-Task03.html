@@ -26,6 +26,31 @@
   // <div class="our-element">Our Element</div>
   // <div class="end" title="End Element" data-value="End">End</div>
 
+  let myDiv = document.querySelector(".our-element");
+  let myP = document.querySelector("p");
+
+  myP.remove();
+
+  // Create Div Before myDiv
+  let start = document.createElement("div");
+  start.className = "start";
+  start.title ="Start Element";
+  start.setAttribute("data-value", "Start");
+  start.textContent = "Start";
+  myDiv.before(start);
+  
+// Create Div after myDiv
+  let end = document.createElement("div");
+  end.className = "end";
+  end.title ="End Element";
+  end.setAttribute("data-value", "End");
+  end.textContent = "End";
+  myDiv.after(end);
+
+
+console.log(start);
+console.log(myDiv);
+console.log(end);
 </script>
 
 </html>
