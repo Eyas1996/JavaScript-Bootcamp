@@ -23,6 +23,12 @@
     // The solution is very simple but requires some research on how to access the element type
 
     // For example, when you click on the Paragraph element, you will see this message "This Is P" and so on.
+
+    // document.addEventListener("click", function (e) {
+    //       console.log(`This is ${e.target.tagName}`);
+    //   });
+
+    document.addEventListener("click", (e) => console.log(`This is ${e.target.tagName}`));
   </script>
 </body>
 
