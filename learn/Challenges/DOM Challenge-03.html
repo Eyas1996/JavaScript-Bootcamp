@@ -18,12 +18,12 @@
     // Body Styling 
     document.body.style.fontFamily = "Tahoma, Arial";
     document.body.style.margin = "0px";
-    document.body.style.backgroundColor = "rgb(236, 236, 236)";
+    document.body.style.backgroundColor = "#f1f1f1";
 
     // Start Container
     let container = document.createElement("div");
     container.className = "container";
-    container.style.padding = "0 15px"
+    container.style.padding = "0 20px"
     document.body.appendChild(container);
     // End Container 
     // Start Header
@@ -36,7 +36,8 @@
     let logo = document.createElement("h1");
     logo.textContent = "Elzero";
     logo.style.color = "#23a96e";
-    logo.style.margin = "0px";
+    logo.style.margin = "7px 0px 0px 0px";
+    logo.style.fontSize = "1.5em";
     header.appendChild(logo);
     // End Logo 
     // Start Navbar
@@ -74,20 +75,25 @@
     let main = document.createElement("main");
     main.style.display = "grid";
     main.style.gridTemplateColumns = " 1fr 1fr 1fr";
-    main.style.gap = " 15px";
-    main.style.padding = " 15px";
+    main.style.gap = " 20px";
+    main.style.height = " 716px";
+    main.style.padding = " 20px";
     main.style.backgroundColor = "#ddd";
     document.body.appendChild(main);
 
     let counter = 1;
     for (let i = 0; i < 15; i++) {
       let box = document.createElement("div");
-      box.style.backgroundColor = "#ececec";
+      box.style.backgroundColor = "#f1f1f1";
       box.style.textAlign = "center";
-      let num = document.createElement("h3");
+      box.style.display = "flex";
+      box.style.flexDirection = "column";
+      box.style.justifyContent = "center";
+      box.style.borderRadius = "4px";
+      let num = document.createElement("h1");
       num.textContent = counter++;
       num.style.marginBottom = "7px";
-      num.style.fontSize = "1.5rem";
+      num.style.fontSize = "2.3rem";
       num.style.fontWeight = "normal";
       let title = document.createElement("span");
       title.textContent = "Product";
@@ -109,7 +115,7 @@
     let myP = document.createElement("p");
     myP.textContent = "Copyright 2021";
     myP.style.color = "#fff";
-    myP.style.padding = "15px";
+    myP.style.padding = "20px";
     myP.style.margin = "0px";
     footer.appendChild(myP);
     // End Footer
