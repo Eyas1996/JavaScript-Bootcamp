@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>setTimeout and clearTimeout</title>
+</head>
+
+<body>
+  <button>Stop</button>
+  <script>
+    /*
+    BOM [Browser Object Model]
+    - setTimeout(Function, Timeout, Additional Params)
+    - clearTimeout(Identifier)
+    */
+
+    // setTimeout(function () {
+    //   console.log(`Msg`);
+    // }, 3000);
+
+    // setTimeout(sayMsg, 3000);
+    // function sayMsg() {
+    //   console.log(`Iam Msg`);
+    // };
+
+    // setTimeout(sayMsg, 3000, "Osama", 38);
+    // function sayMsg(user, age) {
+    //   console.log(`Iam Msg For ${user} His Age Is: ${age}`);
+    // };
+
+    let counter = setTimeout(sayMsg, 3000);
+    function sayMsg() {
+      console.log(`Iam Msg`);
+    };
+    // console.log(counter);
+
+    let btn = document.querySelector("button");
+
+    btn.onclick = function () {
+      clearTimeout(counter)
+    };
+  </script>
+</body>
+
+</html>
