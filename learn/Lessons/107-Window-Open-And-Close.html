@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Window Open And Close</title>
+</head>
+
+<body>
+
+  <script>
+    /*
+      BOM [Browser Object Model]
+      - open(URL [Opt], Window Name Or Target Attr [Opt], Win Features [Opt], History Replace [Opt])
+      - close()
+      - Window Features
+      --- left [Num]
+      --- top [Num]
+      --- width [Num]
+      --- height [Num]
+      --- menubar [yes || no]
+    
+      Search
+      - Window.Open Window Features
+    */
+
+    setTimeout(function () {
+      window.open("https://google.com", "_blank", "width=400,height=400,left=200,top=10");
+    }, 2000);
+  </script>
+</body>
+
+</html>
