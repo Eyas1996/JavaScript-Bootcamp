@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destructuring Arrays Part 2</title>
+  </head>
+  <body>
+    <script>
+      /*
+        Destructuring
+        - Destructuring Array Advanced Examples
+      */
+      let myFriends = [
+        "Ahmed",
+        "Sayed",
+        "Ali",
+        ["Shady", "Amr", ["Mohamed", "Gamal"]],
+      ];
+      // console.log(myFriends[3][2][1]);
+      let [, , , [a, , [, b]]] = myFriends;
+      console.log(a); // Shady
+      console.log(b); // Gamal
+    </script>
+  </body>
+</html>
