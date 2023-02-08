@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destructuring Objects Part Two</title>
+  </head>
+  <body>
+    <script>
+      /*
+        Destructuring
+        - Destructuring Object
+        --- Naming The Variables
+        --- Add New Property
+        --- Nested Object
+        --- Destructuring The Nested Object Only
+      */
+
+      const user = {
+        theName: "Osama",
+        theAge: 39,
+        theTitle: "Developer",
+        theCountry: "Egypt",
+        theColor: "Black",
+        skills: {
+          html: 70,
+          css: 80,
+        },
+      };
+      // Destructuring Object
+      const {
+        theName: n,
+        theAge: a,
+        theCountry,
+        theColor: co = "Red",
+        skills: { html: h, css: c },
+      } = user;
+
+      console.log(n);
+      console.log(a);
+      console.log(theCountry);
+      console.log(co);
+      // console.log(`My HTML Skill Progress Is ${skills}%`);
+      // console.log(`My HTML Skill Progress Is ${html}%`);
+      console.log(`My HTML Skill Progress Is ${h}%`);
+      // console.log(`My CSS Skill Progress Is ${css}%`);
+      console.log(`My CSS Skill Progress Is ${c}%`);
+
+      // Destructuring The Nested Object Only
+      const { html: skillOne, css: skillTwo } = user.skills;
+      console.log(`My HTML Skill Progress Is ${skillOne}%`);
+      console.log(`My CSS Skill Progress Is ${skillTwo}%`);
+    </script>
+  </body>
+</html>
