@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destructuring Mixed Content</title>
+  </head>
+  <body>
+    <script>
+      /*
+        Destructuring
+        - Destructuring Mixed Content
+      */
+
+      const user = {
+        theName: "Osama",
+        theAge: 39,
+        skills: ["HTML", "CSS", "JavaScript"],
+        addresses: {
+          egypt: "Cairo",
+          ksa: "Riyadh",
+        },
+      };
+
+      const {
+        theName: n,
+        theAge: a,
+        skills: [, , three],
+        addresses: { egypt: e },
+      } = user;
+
+      console.log(`Your Name Is ${n}`);
+      console.log(`Your Name Is ${a}`);
+      console.log(`Your Last Skill Is: ${three}`);
+      console.log(`Your Live In: ${e}`);
+    </script>
+  </body>
+</html>
