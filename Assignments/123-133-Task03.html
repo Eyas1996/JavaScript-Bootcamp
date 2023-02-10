@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 03</title>
+  </head>
+  <body>
+    <script>
+      // Task 03
+
+      //  You have an Object containing your data
+      // What is required is to use what you have learned to convert the Object to a Map
+      // In the first line, the content of the Map is printed
+      // In the second line, you print the number of elements of the Map
+      // In the last line, you check whether the Map contains an element named role or not
+      let myInfo = {
+        username: "Osama",
+        role: "Admin",
+        country: "Egypt",
+      };
+
+      let myNewObj = new Map(Object.entries(myInfo));
+
+      console.log(myNewObj);
+      console.log(myNewObj.size);
+      console.log(myNewObj.has("role"));
+      // Needed Output
+      // Map(3) {'username' => 'Osama', 'role' => 'Admin', 'country' => 'Egypt'}
+      // 3
+      // true
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 01</title>
+  </head>
+  <body>
+    <script>
+      // Task 01
+
+      // Create a new Set named setOfNumbers
+      // Add 10 to Set during build
+      // Add the number 20 to Set on a separate line
+      // In the same previous line, add a new element, which is the number of elements of the previous set
+      // Print the set in the console and make sure it matches the following example
+      // In just one separate line, use what you learned to print the last element in the set
+
+      let setOfNumbers = new Set([10]);
+      setOfNumbers.add(20).add(setOfNumbers.size);
+
+      console.log(setOfNumbers);
+      console.log(setOfNumbers.size - 1);
+
+      // Needed output
+      // Set(3) {10, 20, 2}
+      // 2
+    </script>
+  </body>
+</html>
