@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Four</title>
+  </head>
+  <body>
+    <script>
+      // You have an Object that contains data for one person
+      // Do the Destructuring Assignment to get the desired result at the end inside the console
+      // Note that you should ignore Hobby #2 and just print the rest
+
+      const member = {
+        age: 30,
+        working: false,
+        country: "Egypt",
+        hobbies: ["Reading", "Swimming", "Programming"],
+      };
+
+      // Write Your Destructuring Assignment Here
+      const {
+        age: a,
+        working: w,
+        country: c,
+        hobbies: [h1, , h3],
+      } = member;
+      console.log(`My Age Is ${a} And Iam ${w ? "" : "Not"} Working`);
+      // My Age Is 30 And Iam Not Working
+
+      console.log(`I Live in ${c}`);
+      // I Live in Egypt
+
+      console.log(`My Hobbies: ${h1} And ${h3}`);
+      // My Hobbies: Reading And Programming
+    </script>
+  </body>
+</html>

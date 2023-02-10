@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Two</title>
+  </head>
+  <body>
+    <script>
+      // You have an Array containing the names of your technologies
+      // Do the Destructuring Assignment to get the wanted result at the end inside the console
+
+      let mySkills = [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        ["PHP", "Python", ["Django", "Laravel"]],
+      ];
+
+      // Write Your Destructuring Assignment Here
+      const [a, b, c, [d, e, [f, g]]] = mySkills;
+
+      console.log(a);
+      console.log(b);
+      console.log(c);
+      console.log(d);
+      console.log(e);
+      console.log(f);
+      console.log(g);
+      console.log(`My Skills: ${a}, ${b}, ${c}, ${d}, ${e}, ${f}, ${g}`);
+
+      // My Skills: HTML, CSS, JavaScript, PHP, Python, Django, Laravel
+    </script>
+  </body>
+</html>
