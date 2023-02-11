@@ -17,32 +17,31 @@
       // See each example and its Output
       // Watch at the end an explanation of the idea so that you can fully understand it
 
-      //  let chars = ["A", "B", "C", "D", "E", 10, 15, 6];
+      // --------------------------------------------------------
+      // You have the following Array containing 3 numbers
+      // So no matter where the numbers are, we make sure they are at the beginning of the array
+      // Now we copy the first 3 letters in place of the numbers to show the following result
+      // --------------------------------------------------------
+      let chars1 = ["A", "B", "C", "D", "E", 10, 15, 6];
+      chars1.sort();
+      chars1.copyWithin(0, 3, 6);
+      console.log(chars1);
       // Needed Output
       // ['A', 'B', 'C', 'A', 'B', 'C', 'D', 'E']
-      // ----------------------------------------------
-
-      // let chars = ["A", "B", "C", 20, "D", "E", 10, 15, 6];
+      // --------------------------------------------------------
+      let chars2 = ["A", "B", "C", 20, "D", "E", 10, 15, 6];
+      chars2.sort();
+      chars2.copyWithin(0, 4, 8);
+      console.log(chars2);
       // Needed Output
       // ['A', 'B', 'C', 'D', 'A', 'B', 'C', 'D', 'E']
-      // ----------------------------------------------
-
-      // let chars = ["Z", "Y", "A", "D", "E", 10, 1];
+      // --------------------------------------------------------
+      let chars3 = ["Z", "Y", "A", "D", "E", 10, 1];
+      chars3.copyWithin(2);
+      console.log(chars3);
       // Needed Output
       // ["Z", "Y", "Z", "Y", "A", "D", "E"]
-      // ----------------------------------------------
-
-      // You have the following Array containing 3 numbers
-      // let chars = ["A", "B", "C", "D", "E", 10, 15, 6];
-      // ----------------------------------------------
-
-      // So no matter where the numbers are, we make sure they are at the beginning of the array
-      // let chars = [10, 15, 6, "A", "B", "C", "D", "E"];
-      // ----------------------------------------------
-
-      // Now we copy the first 3 letters in place of the numbers to show the following result
-      // let chars = ["A", "B", "C", "A", "B", "C", "D", "E"];
-      // ----------------------------------------------
+      // --------------------------------------------------------
     </script>
   </body>
 </html>

@@ -16,6 +16,14 @@
 
       let theName = "Elzero";
 
+      console.log([...theName]);
+      console.log(theName.split(""));
+      console.log(Array.from(theName));
+      console.log([...new Set(theName)]);
+      console.log(Object.assign([], theName));
+
+      let toArray = Array.prototype.slice.call(theName);
+      console.log(toArray);
       // Needed Output
       // ["E", "l", "z", "e", "r", "o"];
     </script>
