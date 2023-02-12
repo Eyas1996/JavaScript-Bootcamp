@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regular Expression – Quantifiers Part 2</title>
+  </head>
+  <body>
+    <script>
+      /*
+        Regular Expression
+
+        Quantifiers
+        n{x}   => Number of
+        n{x,y} => Range x or y
+        n{x,}  => At Least x
+      */
+
+      let serials = "S100S S3000S S50000S S950000S";
+      console.log(serials.match(/s\d\d\ds/gi)); // S[Three Number]S
+      console.log(serials.match(/s\d{3}s/gi)); // S[Three Number]S
+      console.log(serials.match(/s\d{4,5}s/gi)); // S[Four Or Five Number]S
+      console.log(serials.match(/s\d{4,}s/gi)); // S[At Least Four]S
+    </script>
+  </body>
+</html>
