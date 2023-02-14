@@ -11,6 +11,8 @@
       // You have the following IP, do a RegEx Pattern to match this IP
 
       let ip = "2001:db8:3333:4444:5555:6666:7777:8888";
+      let re = /(\w+|\D+)+/g;
+      console.log(ip.match(re));
     </script>
   </body>
 </html>

@@ -14,12 +14,14 @@
       let date2 = "25 - 10 - 1982";
       let date3 = "25 10 1982";
       let date4 = "25 10 82";
+      let date5 = "123 4567 - 891011";
 
-      let re = //; // Write Pattern Here
-        console.log(date1.match(re)); // "25/10/1982"
+      let re = /\d{2,}(\s?(\W)?\s?\d{2,}\s?(\W)?\s?\d{2,})?/g; // Write Pattern Here
+      console.log(date1.match(re)); // "25/10/1982"
       console.log(date2.match(re)); // "25 - 10 - 1982"
       console.log(date3.match(re)); // "25 10 1982"
       console.log(date4.match(re)); // "25 10 82"
+      console.log(date5.match(re)); // "123 4567 - 891011"
     </script>
   </body>
 </html>

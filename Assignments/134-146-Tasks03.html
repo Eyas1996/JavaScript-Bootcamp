@@ -11,6 +11,8 @@
       // You have a variable that contains a phone number in a specific shape
       // A RegExp Pattern is required to match this phone
       let phone = "+(995)-123 (4567)";
+      let re = /\+\(\d{3}\)-\d{3}\s\(\d{4}\)/gi;
+      console.log(phone.match(re));
     </script>
   </body>
 </html>
