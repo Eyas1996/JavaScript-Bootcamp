@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OOP</title>
+  </head>
+  <body>
+    <script>
+      /*
+        Defining Object
+        [1] Object Literal
+        [2] With New Keyword
+        [3] With Object.create()
+      */
+
+      let mainObj = {
+        hasDiscount: true,
+        showMsg: function () {
+          return `You${this.hasDiscount ? "" : " Don't"} Have Discount`;
+        },
+      };
+
+      console.log(mainObj.hasDiscount);
+      console.log(mainObj.showMsg());
+
+      let otherObj = Object.create(mainObj);
+
+      otherObj.hasDiscount = false;
+      console.log(otherObj.hasDiscount);
+      console.log(otherObj.showMsg());
+
+      let lastObj = Object.create(otherObj);
+
+      console.log(lastObj.hasDiscount);
+      console.log(lastObj.showMsg());
+    </script>
+  </body>
+</html>

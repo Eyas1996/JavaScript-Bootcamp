@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OOP</title>
+  </head>
+  <body>
+    <script>
+      /*
+  Defining Object
+  [1] Object Literal
+*/
+
+      let user = {
+        // Properties
+        firstName: "Osama",
+        lastName: "Elzero",
+
+        // Methods
+        getFullName: function () {
+          return `Full Name: ${user.firstName} ${user.lastName}`;
+        },
+      };
+
+      // Accessing Object Properties
+      console.log(user.firstName); // Dot Notation
+      console.log(user["firstName"]); // Bracket Notation
+
+      console.log(typeof user.firstName); // String
+
+      // Accessing Object Methods
+      console.log(typeof user.getFullName); // Function
+      console.log(user.getFullName());
+    </script>
+  </body>
+</html>

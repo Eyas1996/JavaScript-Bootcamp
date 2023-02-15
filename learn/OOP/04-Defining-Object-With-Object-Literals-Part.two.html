@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OOP</title>
+  </head>
+  <body>
+    <script>
+      /*
+        Defining Object
+        [2] Object Literal
+      */
+
+      let user = {
+        // Properties
+        firstName: "Osama",
+        lastName: "Elzero",
+        age: 37,
+        addresses: {
+          eg: "Giza",
+          usa: "California",
+          ksa: "Riyadh",
+
+          getMainAddress: function () {
+            return `Main Address Is In Egypt In City ${user.addresses.eg}`;
+          },
+        },
+
+        // Methods
+        // getFullName: function () {
+        //   return `Full Name: ${user.firstName} ${user.lastName}`;
+        // },
+        getFullName: () => `Full Name: ${user.firstName} ${user.lastName}`,
+
+        getAgeInDays: () => `Your Age In Days Is ${user.age * 365}`,
+      };
+      // Accessing Object Properties
+      console.log(user.firstName); // Dot Notation
+      console.log(user["firstName"]); // Bracket Notation
+
+      console.log(typeof user.firstName); // String
+
+      console.log(user.addresses.eg);
+      console.log(user["addresses"]["ksa"]);
+
+      // Accessing Object Methods
+      console.log(typeof user.getFullName); // Function
+      console.log(user.getFullName());
+      console.log(user.getAgeInDays());
+
+      console.log(user.addresses.getMainAddress());
+    </script>
+  </body>
+</html>
