@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OOP</title>
+  </head>
+  <body>
+    <script>
+      /*
+        Prototype
+      */
+
+      function User(name) {
+        this.name = name;
+        this.welcome = function () {
+          return `Welcome ${this.name}`;
+        };
+      }
+
+      let user1 = new User("Osama");
+      let user2 = new User("Ahmed");
+
+      console.log(User.prototype);
+      console.log(user1);
+
+      User.prototype.addTitle = function () {
+        return `Mr. ${this.name}`;
+      };
+
+      console.log(Object.prototype);
+
+      Object.prototype.elzero = "Elzero Web School";
+
+      const myObject = { a: 1, b: 2 };
+    </script>
+  </body>
+</html>
