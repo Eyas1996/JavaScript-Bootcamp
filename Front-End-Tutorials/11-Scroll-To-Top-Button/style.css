@@ -8,7 +8,7 @@
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
-  /* background-color: #333; */
+  height: 5000px;
 }
 .head-line {
   margin: 20px auto;
@@ -28,7 +28,7 @@ body {
 .up {
   position: fixed;
   bottom: 10px;
-  right: 15px;
+  right: -30px;
   background-color: #ff5722;
   color: white;
   font-weight: bold;
@@ -38,7 +38,11 @@ body {
   font-family: Arial, Tahoma;
   cursor: pointer;
   transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
 }
-/* .up.show {
+.up.show {
   right: 10px;
-} */
+}
