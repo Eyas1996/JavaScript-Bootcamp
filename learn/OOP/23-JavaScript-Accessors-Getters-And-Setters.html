@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OOP</title>
+</head>
+
+<body>
+  <script>
+    /*
+    JavaScript Accessors
+    Getters & Setters
+  */
+
+    class User {
+      constructor(name, email) {
+        this.name = name;
+        this.email = email;
+      }
+      sayHello() {
+        return `Hello ${this.name}`;
+      }
+      showEmail() {
+        return `Your Email Is ${this.email}`;
+      }
+      get showInfo() {
+        return `Name: ${this.name}, Email" ${this.email}`;
+      }
+      changeName(newName) {
+        this.name = newName;
+      }
+      set changeEmail(newEmail) {
+        this.email = newEmail;
+      }
+    }
+
+    let user1 = new User("Osama", "o@nn.sa");
+
+    console.log(user1.name);
+    console.log(user1.email);
+    console.log(user1.showInfo);
+
+    user1.changeName("Mahmoud");
+    console.log(user1.name);
+    console.log(user1.email);
+    console.log(user1.showInfo);
+
+    user1.changeEmail = "oooooo@gmail.com";
+    console.log(user1.name);
+    console.log(user1.email);
+    console.log(user1.showInfo);
+  </script>
+</body>
+
+</html>
