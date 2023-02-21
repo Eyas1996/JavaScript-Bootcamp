@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OOP</title>
+</head>
+
+<body>
+  <script>
+    /*
+      Class
+      Inheritance
+    */
+
+    class User {
+      constructor(name, email) {
+        this.name = name;
+        this.email = email;
+      }
+      sayHello() {
+        return `Hello ${this.name}`;
+      }
+      showEmail() {
+        return `Your Email Is ${this.email}`;
+      }
+      wirteMsg() {
+        return `Message From Parent Class`;
+      }
+    }
+
+    class Admin extends User {
+      constructor(name, email) {
+        super(name, email);
+      }
+      adminMsg() {
+        return `You Are Admin`;
+      }
+      wirteMsg() {
+        return `Message From Chid Class`;
+      }
+    }
+
+    let admin1 = new Admin("Osama", "o@nn.sa");
+    console.log(admin1);
+    console.log(admin1.name);
+    console.log(admin1.email);
+    console.log(admin1.sayHello());
+    console.log(admin1.showEmail());
+    console.log(admin1.adminMsg());
+    console.log(admin1.wirteMsg());
+  </script>
+</body>
+
+</html>
