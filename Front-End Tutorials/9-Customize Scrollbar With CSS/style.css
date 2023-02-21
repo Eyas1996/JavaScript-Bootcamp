@@ -1,0 +1,84 @@
+:root {
+  --main-color: rgb(255 255 255 / 80%);
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  /* background-color: #333; */
+}
+.head-line {
+  margin: 20px auto;
+  text-align: center;
+  background-color: #333333e6;
+  color: #60dbd0;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+/* Customize Scrollbar With CSS */
+.scroll {
+  margin: 40px auto;
+  width: 300px;
+  height: 150px;
+  background-color: #666;
+  color: white;
+  padding: 178px;
+  overflow: auto;
+}
+.scroll::-webkit-scrollbar {
+  width: 30px;
+}
+.scroll::-webkit-scrollbar-track {
+  background-color: #eee;
+}
+.scroll::-webkit-scrollbar-thumb {
+  background-color: #66666663;
+  border-radius: 0;
+}
+.scroll::-webkit-scrollbar-thumb:hover {
+  background-color: black;
+}
+.scroll::-webkit-scrollbar-corner {
+  background-color: #000;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+}
+p {
+  margin-left: 25px;
+  line-height: 2;
+  font-size: 25px;
+}
+::-webkit-scrollbar {
+  width: 25px;
+}
+::-webkit-scrollbar-track {
+  background-color: #f6f6f6;
+  box-shadow: 0 0 10px #ddd inset;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(205 92 92 / 40%);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ff5722;
+}
+::-webkit-scrollbar-corner {
+  background-color: rgba(240, 147, 147, 0.904);
+  border-radius: 5px;
+}
