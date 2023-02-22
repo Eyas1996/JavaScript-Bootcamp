@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Front-End</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <h2 class="head-line">Random Element From Sequence</h2>
+
+  <script>
+    // Ahmed => Index 0
+    // Sayed => Index 1
+    // Ali   => Index 3
+
+    let arr = ["Ahmed", "Sayed", "Ali"];
+
+    console.log(arr.length); // 3
+
+    console.log(Math.random() * arr.length); // 0.6284916105053724
+
+    // console.log(Math.floor(Math.random() * arr.length))
+    console.log(Math.trunc(Math.random() * arr.length));
+
+    console.log(arr[Math.trunc(Math.random() * arr.length)]);
+  </script>
+</body>
+
+</html>
