@@ -1,0 +1,69 @@
+:root {
+  --main-color: rgb(255 255 255 / 80%);
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  place-items: center;
+}
+.head-line {
+  margin: 20px auto;
+  text-align: center;
+  background-color: #333333e6;
+  color: #60dbd0;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+/* Create Tabs */
+.tabs-section {
+  /* margin: 50px 150px 20px; */
+  margin: 20px auto;
+}
+.tabs {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tabs li {
+  padding: 10px;
+  background-color: #f6f4f4;
+  border-right: 1px solid #fff;
+  cursor: pointer;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+.tabs li.active,
+.tabs li:hover {
+  background-color: #ddd;
+}
+.content {
+  background-color: #ddd;
+  max-width: 600px;
+}
+.content > div {
+  padding: 20px;
+}
+.content > div:not(:first-child) {
+  display: none;
+}
+.content > div h3 {
+  margin-bottom: 10px;
+  text-decoration-line: underline;
+  -moz-text-decoration-line: underline;
+}
