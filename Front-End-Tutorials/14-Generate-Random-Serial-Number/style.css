@@ -1,0 +1,55 @@
+:root {
+  --main-color: rgb(255 255 255 / 80%);
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  place-items: center;
+}
+.head-line {
+  margin: 20px auto;
+  text-align: center;
+  background-color: #333333e6;
+  color: #60dbd0;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+/* Generate Random Serial Number */
+.serial {
+  width: 200px;
+  padding: 20px;
+  background-color: #eee;
+  margin: 40px auto 0;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  height: 66.5px;
+}
+.generate {
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
+  background-color: #ff5722;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+  user-select: none;
+}
+.generate:hover {
+  background-color: #f0440e;
+}
